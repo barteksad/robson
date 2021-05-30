@@ -1,4 +1,3 @@
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
 import java.nio.charset.StandardCharsets;
@@ -23,26 +22,18 @@ public class Robson {
     private Gson gson;
 
     public Robson() {
-        RuntimeTypeAdapterFactory<Instruction> InstructionAdapter = RuntimeTypeAdapterFactory.of(Instruction.class, "typ")
-            .registerSubtype(Blok.class, "Blok")
-            .registerSubtype(Liczba.class, "Liczba")
-            .registerSubtype(Dzielenie.class, "Dzielenie")
-            .registerSubtype(Plus.class, "Plus")
-            .registerSubtype(Razy.class, "Razy")
-            .registerSubtype(Equal.class, "==")
-            .registerSubtype(Greater.class, ">")
-            .registerSubtype(GreaterEqual.class, ">=")
-            .registerSubtype(Less.class, "<")
-            .registerSubtype(LessEqual.class, "<=")
-            .registerSubtype(And.class, "And")
-            .registerSubtype(False.class, "False")
-            .registerSubtype(Or.class, "Or")
-            .registerSubtype(True.class, "True")
-            .registerSubtype(If.class, "If")
-            .registerSubtype(Przypisanie.class, "Przypisanie")
-            .registerSubtype(While.class, "While")
-            .registerSubtype(Zmienna.class, "Zmienna")
-            .registerSubtype(Minus.class, "Minus");
+        RuntimeTypeAdapterFactory<Instruction> InstructionAdapter = RuntimeTypeAdapterFactory
+                .of(Instruction.class, "typ").registerSubtype(Blok.class, "Blok")
+                .registerSubtype(Liczba.class, "Liczba").registerSubtype(Dzielenie.class, "Dzielenie")
+                .registerSubtype(Plus.class, "Plus").registerSubtype(Razy.class, "Razy")
+                .registerSubtype(Equal.class, "==").registerSubtype(Greater.class, ">")
+                .registerSubtype(GreaterEqual.class, ">=").registerSubtype(Less.class, "<")
+                .registerSubtype(LessEqual.class, "<=").registerSubtype(And.class, "And")
+                .registerSubtype(False.class, "False").registerSubtype(Or.class, "Or")
+                .registerSubtype(True.class, "True").registerSubtype(If.class, "If")
+                .registerSubtype(Przypisanie.class, "Przypisanie").registerSubtype(While.class, "While")
+                .registerSubtype(Modulo.class, "%").registerSubtype(Zmienna.class, "Zmienna")
+                .registerSubtype(Minus.class, "Minus");
         gson = new GsonBuilder().registerTypeAdapterFactory(InstructionAdapter).disableHtmlEscaping().create();
     }
 
@@ -50,7 +41,7 @@ public class Robson {
         try {
             Reader reader = Files.newBufferedReader(Paths.get(filename));
             program = gson.fromJson(reader, Instruction.class);
-        } catch(Exception e) {
+        } catch (Exception e) {
             throw new NieprawidlowyProgram();
         }
     }
@@ -66,7 +57,7 @@ public class Robson {
         }
     }
 
-    void toJava(String filename){
+    void toJava(String filename) {
 
     }
 

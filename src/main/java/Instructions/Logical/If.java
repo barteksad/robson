@@ -10,7 +10,7 @@ public class If extends Instruction {
 
     @Override
     public double wykonaj(Map<String, Double> state) {
-        if(warunek.wykonaj(state) > 0)
+        if (warunek.wykonaj(state) > 0)
             return blok_prawda.wykonaj(state);
         else
             return blok_falsz.wykonaj(state);

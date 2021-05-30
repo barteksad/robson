@@ -3,11 +3,11 @@ package Instructions.Arithmetic;
 import Instructions.TwoArgsOperation;
 import java.util.*;
 
-public class Razy extends TwoArgsOperation {
+public class Modulo extends TwoArgsOperation {
 
     @Override
     public double wykonaj(Map<String, Double> state) {
-        return argument1.wykonaj(state) * argument2.wykonaj(state);
+        return (double) (int) argument1.wykonaj(state) % (int) argument2.wykonaj(state);
     }
 
 }

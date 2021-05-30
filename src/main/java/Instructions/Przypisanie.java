@@ -1,5 +1,7 @@
 package Instructions;
+
 import java.util.*;
+
 public class Przypisanie extends Instruction {
     private String nazwa;
     private Instruction wartosc;
