@@ -9,4 +9,5 @@ public class Zmienna extends Instruction {
     public double wykonaj(Map<String, Double> state) {
         return state.get(nazwa);
     }
+
 }

@@ -9,4 +9,5 @@ public class Liczba extends Instruction {
     public double wykonaj(Map<String, Double> state) {
         return wartosc;
     }
+
 }

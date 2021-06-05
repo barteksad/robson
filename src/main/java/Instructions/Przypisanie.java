@@ -12,4 +12,5 @@ public class Przypisanie extends Instruction {
         state.put(nazwa, w);
         return w;
     }
+
 }

@@ -14,4 +14,5 @@ public class Greater extends TwoArgsOperation {
         else
             return 0.0;
     }
+
 }

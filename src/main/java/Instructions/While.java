@@ -12,4 +12,5 @@ public class While extends Instruction {
             blok.wykonaj(state);
         return 0.0;
     }
+
 }

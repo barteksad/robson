@@ -1,6 +1,5 @@
 package Instructions;
 
-import java.util.*;
 import java.util.Map;
 
 public abstract class Instruction {

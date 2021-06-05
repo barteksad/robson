@@ -13,4 +13,5 @@ public class GreaterEqual extends TwoArgsOperation {
         else
             return 0.0;
     }
+
 }

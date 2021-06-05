@@ -15,4 +15,5 @@ public class If extends Instruction {
         else
             return blok_falsz.wykonaj(state);
     }
+
 }

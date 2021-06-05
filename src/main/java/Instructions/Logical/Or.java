@@ -13,4 +13,5 @@ public class Or extends TwoArgsOperation {
         else
             return 0.0;
     }
+
 }
